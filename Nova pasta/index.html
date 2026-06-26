@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Coisas Mais Legais do Mundo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121214;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #1e1e24 0%, #121214 100%);
+            border-bottom: 2px solid #29292e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ff007f, #7f00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #a8a8b3;
+            font-weight: 500;
+            animation: bounce 2s infinite;
+        }
+
+        /* Animação de pulo na legenda */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-8px);
+            }
+            60% {
+                transform: translateY(-4px);
+            }
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #1e1e24;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #29292e;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Efeito ao passar o mouse */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 32px rgba(127, 0, 255, 0.2);
+            border-color: #7f00ff;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-color: #121214;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Mantém a proporção de imagens com fundo transparente (PNGs) */
+        .card.contain img {
+            object-fit: contain;
+            padding: 15px;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1e1e24;
+            border-top: 1px solid #29292e;
+        }
+
+        .card-info h3 {
+            font-size: 1.15rem;
+            color: #e1e1e6;
+            font-weight: 600;
+        }
+
+        /* Ajuste para celulares */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Galeria das coisas mais legais do mundo</h1>
+        <p>⬇ role para baixo para mostrar as coisas mais legais do mundo ⬇</p>
+    </header>
+
+    <main class="gallery-container">
+        <div class="card contain">
+            <div class="image-wrapper">
+                <img src="006.png" alt="Charizard">
+            </div>
+            <div class="card-info">
+                <h3>Charizard</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="2025-06-04T193907Z_100308004_UP1EL641IL5KO_RTRMADP_3_SOCCER-UEFANATIONS-GER-POR-REPORT.webp" alt="Cristiano Ronaldo">
+            </div>
+            <div class="card-info">
+                <h3>Cristiano Ronaldo (CR7)</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="a15ac43cbdee19bc1e6632dee1c883ff.jpg" alt="Homem-Aranha">
+            </div>
+            <div class="card-info">
+                <h3>Homem-Aranha</h3>
+            </div>
+        </div>
+
+        <div class="card contain">
+            <div class="image-wrapper">
+                <img src="Ben_10_29.webp" alt="Ben 10">
+            </div>
+            <div class="card-info">
+                <h3>Ben 10</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="fffee54ba1.webp" alt="Pista Hot Wheels Ataque do Tubarão">
+            </div>
+            <div class="card-info">
+                <h3>Hot Wheels - Ataque do Tubarão</h3>
+            </div>
+        </div>
+
+        <div class="card contain">
+            <div class="image-wrapper">
+                <img src="Michelangelo_(Teenage_Mutant_Ninja_Turtles)_2003.jpg" alt="Michelangelo (Tartarugas Ninja)">
+            </div>
+            <div class="card-info">
+                <h3>Michelangelo (TMNT)</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="ninjagoheader.jpg" alt="Lego Ninjago">
+            </div>
+            <div class="card-info">
+                <h3>Lego Ninjago</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="thor-hemsworth.jpg" alt="Thor">
+            </div>
+            <div class="card-info">
+                <h3>Thor</h3>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
